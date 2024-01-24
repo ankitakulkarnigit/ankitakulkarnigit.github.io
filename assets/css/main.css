@@ -2014,7 +2014,7 @@
 /* Section/Article */
 
 	section.special, article.special {
-		text-align: center;
+		/* text-align: center; */
 	}
 
 	header p {
@@ -2326,7 +2326,7 @@
 				}
 
 		.box.special {
-			text-align: center;
+			/* text-align: center; */
 		}
 
 		.box .image.featured {
