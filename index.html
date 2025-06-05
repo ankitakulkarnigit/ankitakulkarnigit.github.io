@@ -1,271 +1,590 @@
-<!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="landing is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="I'm Ankita, and this is my personal portfolio website..">
+		<meta name="keywords" content="Ankita, Ankita Kulkarni, ankita ">
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="./packages/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="./packages/css/styles.css">
+		
+	<!--==================== Favicon ====================-->
+	<link rel="shortcut icon" href="./packages/images/favicon.png" type="images/png"> 
 
-			<!-- Header -->
-				<header id="header" class="alt">
-					<h1><a href="index.html">Ankita's Portfolio</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-						</ul>
-					</nav>
-				</header>
+	<!--==================== Animate on scroll CDN ====================-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+			
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	<title>Ankita Kulkarni</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+		<nav class="nav container">
+		<a href="#" class="nav__logo">Ankita Kulkarni</a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">
+                                <i class="uil uil-estate nav__icon"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i>About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i>Skills
+                            </a>
+                        </li>
+         
+                        <!--<li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i>Portfolio                                
+                            </a>
+                        </li> -->
 
-			<!-- Banner -->
-				<section id="banner">
-					<h2>Ankita's Portfolio</h2>
-					<ul class="actions special">
-						<li><a onclick="location.href='mailto:kulkarninakita555@gmail.com';" class="button primary">Contact</a></li>
-						<li><a href="https://www.linkedin.com/in/kulkarniankita555/" target=_blank class="button">Learn More</a></li>
-					</ul>
-				</section>
+			<li class="nav__item">
+                            <a href="#certification" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i>Certification                            
+                            </a>
+                        </li>
+			    
+			<li class="nav__item">
+                            <a href="#blog" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i>Blog
+                            </a>
+                        </li> 
+                        
+			<li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i>Contact                            
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+                <div class="nav__btns">
+                    <!-- Theme change button -->
 
-			<!-- Main -->
-			<!-- About me -->
-			<section id="main" class="container">
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
 
-				<section class="box special">
-					<header class="major">
-						<h2>Hello! My name is <b>Ankita</b>
-						<br />
-						</h2>
-					</header>
-					<div class="box special features">
-					<div class="features-row">
-						<section>
-							<img src="images/IMG_7644.jpg" alt style="height: 400px; width: 400px;"/>
-						</section>
-						<section style="text-align: center;">
-							<p> Okay, picture this: a girl from Pune, India, graduates undergrad with flying colors, spends two years 
-								navigating the corporate jungle at NTT Data, trying to figure out what more is to life than what is already being acheived, 
-								then realizes life needs more oomph than masala chai. That's when her adventure began: 
-								<ul style="list-style-type: none;">
-									<li>Masters in the US &check;</li>
-									<li>Startup hustle to sharpen the saw &check; </li>
-								</ul>
-								Now, at Barclays, exploring the world of bigdata and hadoop, 
-								I'm ready for the Silicon Valley adventure. Bay Area dreams simmering, 
-								I'm eager to join a team where passion meets purpose and lattes flow freely (okay, maybe sometimes chai too). 
-							</p>
-						</section>
-					</div>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-					<header class="major">
-						<h2>Let's get down to business, shall we?
-						<br />
-						</h2>
-					</header>
-					<div>
-						<!-- <img src="images/barclays.jpeg" alt style="height: 100px; width: 200px;"/> -->
-						<header class="major">
-							<p style="color: skyblue; font-size: 1.5em; font-weight: bold; text-align: justify;
-							text-justify: inter-word;">Barclays Inc</p>
-						</header>
-						<section style="text-align: justify; text-justify: inter-word;">
-
-							<p> <b>Highlights:</b>
-								<ul>
-									<li>Developed an efficient and customizable framework to streamline data transfer between Oracle schemas using impdp/expdp, resulting in a 30% reduction in development time.</li>
-									<li>Working on a Widget Recommendation Engine Proof of Concept (POC) utilizing ALS (Alternating Least Squares) algorithm to analyze user search patterns and behaviors, achieving an 84% Area Under the Curve (AUC) accuracy.</li>
-									<li>Utilizing Hadoop HDFS and Scala to design and implement a high-performance framework ingesting millions of daily transactions, enriching data for upstream applications to be able to consume effortlessly.</li>
-								</ul>
-								<b>Skills:</b>
-								<ul>
-									<li> Scala</li>
-									<li> Angular</li>
-									<li> Shell Script</li>
-									<li> HDFS</li>
-									<li> Jenkins</li>
-									<li> Groovy</li>
-									<li> Python</li>
-								</ul>
-							</p>
-						</section>
-					</div>
-					<div>
-						<!-- <img src="images/gmc.jpeg" alt style="height: 100px; width: 100px;"/> -->
-						<header class="major">
-							<p style="color: skyblue; font-size: 1.5em; font-weight: bold; text-align: left;">Greg Morris Cards</p>
-						</header>
-						<section style="text-align: justify; text-justify: inter-word;">
-							<p> <b>Highlights:</b>
-								<ul>
-									<li>Revamped all GMC websites, both public-facing and intranet, to meet the dynamic needs of business stakeholders</li>
-									<li>Developed tools for recognizing fake cards using Image Recognition and AI Supervised Learning</li>
-									<li>Strategically devised and deployed services for a new Auctions venture, featuring complex bid increment logic.
-									</li>
-								</ul>
-								<b>Skills:</b>
-								<ul>
-									<li> PostgreSQL</li>
-									<li> AWS (EC2, Route53, ELB, IAM, VPC, S3, RDBMS. MariaDB)</li>
-									<li> Vue.js</li>
-									<li> PHP</li>
-									<li> Laravel</li>
-									<li> Python</li>
-									<li> OpenCV, Scikit-Image, SciPy, PIL and Numpy</li>
-									<li> React</li>
-									<li> Veutify, Tailwind, CSS</li>
-									<li> Nginx, PostgreSQL and RDBMS, OAuth, SSO</li>
-								</ul>
-							</p>
-						</section>
-						</div>
-					<div>
-					<header class="major">
-						<p style="color: skyblue; font-size: 1.5em; font-weight: bold;">NTT Data</p>
-					</header>
-					<!-- <img src="images/NTT_Data-Logo.wine.png" alt style="height: 100px; width: 150px;"/> -->
-					<section style="text-align: justify; text-justify: inter-word;">
-							<p> <b>Highlights:</b>
-								<ul>
-									<li>Developed chatbots and integrated with third party apps using Dialog Flow & IBM Watson</li>
-									<li>Gained expertise on Blockchain with Internet of Things (IoT) for Supply Chain Tracking & Management and Artificial Intelligence (AI) for developing a healthcare system.</li>
-									<li>Received a SPOT award for my work in developing health care system POC</li>
-								</ul>
-								<b>Skills:</b>
-								<ul>
-									<li> Blockchain</li>
-									<li> Machine Learning</li>
-									<li> Python</li>
-									<li> Node.js</li>
-									<li> Typescript.js</li>
-									<li> Docker</li>
-									<li> Java - SpringBoot</li>
-									<li> HTML & CSS</li>
-								</ul>
-							</p>
-					</section>
-					</div>
-					
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div data-aos="fade-left" class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/kulkarniankita555/"
+                            target="_blank" class="home__social-icon">
+                            <i class="fa fa-linkedin-square" style='font-size:24px'></i>
+                        </a>
+                        <a href="https://github.com/ankitakulkarnigit" target="_blank" class="home__social-icon">
+							<i class="fa fa-github" style='font-size:24px' ></i>
+                        </a>
+                        <!-- <a href="https://www.kaggle.com/ankita555" target="_blank" class="home__social-icon">
+                           <span style='font-size:24px'>&#922;</span>
+                        </a> -->
 						
-						<!-- <div>
-							<img src="images/next.jpg" alt style="height: 100px; width: 200px;"/>
-							<section style="text-align: justify; text-justify: inter-word;">
-								<p> While I love and enjoy my time at my current company unfortunately my life and career goals do not align here and hence I am looking for an opportunity in Bay Area to be closer to my family.
-									Besides, what is more appealing than to live a life in the city of tech giants, morning lattes and being closer to family and friends. That being said, if you liked my jouney so far, and if you are looking for someone who is resilient, hard working and a well-grounded developer, please contact me to arrange an interview. 
-									I am eager to learn more about how your organization can benefit from my contribution as well as how I can further enhance my knowledge.
-								</p>
-							</section>
-						</div> -->
-					<div style="display: flex; justify-content: space-around; width: 100%; text-align: center;">
-						<a href="docs/Resume_Ankita_Kulkarni_2024.pdf" download="Resume_Ankita_Kulkarni" target=_blank style="flex-basis: 30%;">
-						<section>
-							<span class="icon solid major fa-download accent3"></span>
-							<u><p>Download CV here</p></u>
-						</section>
-						</a>
-						<a href="docs/Cover_Letter_Ankita_Kulkarni.pdf" download="Cover_Letter_Ankita_Kulkarni" target=_blank style="flex-basis: 30%;">
-							<section style="line-height: 1.2;">
-								<span class="icon solid major fa-download accent3"></span>
-								<u><p style="margin: 2%;">Download Cover letter here</p></u>
-								<!-- <p style="margin: 0%;">(I know! It's 2024, it bums me out too!)</p> -->
-							  </section>
-						</a>
-						<a href="https://www.linkedin.com/in/kulkarniankita555/" target=_blank style="flex-basis: 30%;">
-							<section>
-								<span class="icon solid major brands fa-linkedin accent3"></span>
-								<u><p>LinkedIn Profile</p></u>
-							</section>
-						</a>
-					</div>
-					</div>
-				</section>
-			</section>
+			<a href="https://medium.com/@kulkarniankita555" target="_blank" class="home__social-icon">
+			<i class="fa fa-medium" style='font-size:24px'></i> 
+			</a>
+						
+	
+						
+                    </div>
 
-				<section id="projects" class="container">
-					<section class="box special features">
-						<header class="major" style="padding: 0%;">
-							<h2 style="padding: 0%; font-weight: 800;">PROJECTS AND CONTRIBUTIONS
-							<br />
-							</h2>
-						</header>
-						<span class="image featured"><img src="images/mac-pro-black.jpg" alt/></span>
+                    <div data-aos="fade-right" class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
 
-						<div class="features-row" style="text-align: center;">
-							<section>
-								<a href="https://github.com/ankitakulkarnigit/CodeBlackBot"><span class="icon solid major fa-bolt accent2"></span>
-								<h3>CodeBlackBot</h3></a>
-								<p style="text-align: justify; text-justify: inter-word;">This project involves developing a Chinese Go Bot using python libraries. Bot would compete with other bots and improve its score. Achieved the highest accuracy by far using Gradient Decent Algorithm. An AI driven Go bot hosted on Online-Go.com server. </p>
-							</section>
-							<section>
-								<a href="https://github.com/ankitakulkarnigit/ScroogeCoin"><span class="icon solid major fa-chart-area accent3"></span>
-								<h3>ScroogeCoin</h3></a>
-								<p style="text-align: justify; text-justify: inter-word;">The class returns a mutually valid transaction set, selects transactions it has chosen to accept, handleTxs should also update its internal UTXOPool to reflect the current set of unspent transaction outputs, so that future calls to handleTxs() and isValidTx() are able to correctly process/validate transactions that claim outputs from transactions that were accepted in a previous call to handleTxs()</p>
-							</section>
-							<section>
-								<a href="https://github.com/ankitakulkarnigit/smarty-pants"><span class="icon solid major fa-bolt accent2"></span>
-								<h3>SmartyPants</h3></a>
-								<p style="text-align: justify; text-justify: inter-word;">Created this project to experiment around OpenAI. Mr. Smarty Pants takes in a text input as a prompt and answers life's questions. This is still a project under development and will be hosted on AWS soon. Please watch the Demo Video below :</p>
-							</section>
-						</div>
-						<div style="height: 100%; width: 100%;"><video autoplay controls>
-							<source src="images/smarty-pants.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						  </video>
-						</div>
-					</section>
-					
-				</section>
-				
-				<section id="articles" class="container">
-					
-					<section class="box special features">
-					<header class="major" style="padding: 0%;">
-						<h2 style="padding: 0%; font-weight: 800;">ARTICLES
-						<br />
-						</h2>
-					</header>
-					<span class="image featured"><img src="images/articles.png" alt/></span>
+                                <image class="home__blob-img" x="15" y="15" href="./packages/images/main.png" />
+                            </g>
+                        </svg>
+                    </div>
 
-					<section>
-					<div style="margin: 6%;border-block: thin solid black;">
-						<p style="font-weight: 800; margin: 2%; font-size: larger;" class="underline">The Impact of Blockchain Solutions in Investments and Banking</p>
-						<p style="margin: 2%">Introduction: In recent years, blockchain technology has emerged as a transformative force, 
-							disrupting traditional industries and revolutionizing the way we handle transactions. 
-							One of the sectors experiencing significant changes is finance, particularly in investments and banking...</p>
-						<p style="margin: 2%"><a href="https://medium.com/@kulkarniankita555/the-impact-of-blockchain-solutions-in-investments-and-banking-70efb1ca5e57" target=_blank><u>Read of Medium</u></a></p>
-					</div>
-					</section>
-				</section>
-			</section>
-
-			<!-- CTA -->
-
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/kulkarniankita555/" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
-						<li><a href="https://github.com/ankitakulkarnigit" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>All rights reserved &copy; Ankita Kulkarni @ 2024. </li><li>Powered by <a>Github.io</a></li>
-					</ul>
-				</footer>
-
+                    <div class="home__data">
+                        <h1 class="home_title">Hi!<span class="wave">👋</span>, I'm Ankita</h1>
+                        <h3 class="home__subtitle">
+                            Software Engineer and Machine Learning Enthusiast 
+                        </h3>
+                        <p class="home__description"> </p>
+                        <a href="#contact" class="button button--flex">
+                            Contact me <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
 		</div>
+            </div>
+        </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
-	</body>
+            <!--==================== ABOUT ====================-->
+		<section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle"> My Introduction</span>
+
+            <div data-aos="fade-left" class="about__container container grid">
+                <img src="./packages/images/main-1.png" alt="" class="about__img" />
+
+                <div class="about__data">
+                    <p class="about__description">
+                        Hi! I'm a Software Engineer over at Barclays. My passion really lies in software development, especially when it comes to Machine Learning and Big Data. I've spent the last five years designing and implementing high-performance web applications, and I'm always keen to explore new languages and frameworks to get the job done right.
+	                    </p>
+
+                    <div class="about__buttons">
+                        <a download="" href="packages/docs/Resume_Ankita_Kulkarni" class="button button--flex" target="_blank">
+                            Download Resume <i class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+ <!--==================== SKILLS ====================-->
+    <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+	<span class="section__subtitle">My technical level</span>
+            <div data-aos="fade-up" class="skills__container container grid">
+                <div>
+                    
+		<!--==================== SKILL 1 ====================-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Programming Languages</h1>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Python </h3>
+                                </div>
+
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Javascript </h3>
+                                </div>
+
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> PHP </h3>
+                                </div>
+
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Scala </h3>
+                                </div>
+
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Shell Script </h3>
+                                </div>
+
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Java </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== SKILL 2 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-file-copy-alt skills__icon"></i>
+                            <div>
+                                <h1 class="skills__titles">Frameworks </h1>
+                            </div>
+			<i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Laravel </h3>
+                                </div>
+
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Angular </h3>
+                                </div>
+                            
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Vue </h3>
+                                </div>
+                            
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Apache Spark (using sbt) </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+					               					
+					<!--==================== SKILL 3 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-file-copy-alt skills__icon"></i>
+                            <div>
+                                <h1 class="skills__titles">ML Libraries </h1>
+                            </div>
+			<i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> NumPy </h3>
+                                </div>
+
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Pandas </h3>
+                                </div>
+                            
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Matplotlib </h3>
+                                </div>
+                            
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Scikit-learn </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+					               
+                    <!--==================== SKILL 4 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-swatchbook skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__titles">Developer Tools and Technologies</h1>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+					<div class="skills__titles">
+                                    <h3 class="skills__name"> Database - SQL, PostgreSQL, DynamoDB, SQLite3</h3>
+                                </div>
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Deployments - Docker, Kubernetes, AWS, Jenkins </h3>
+                                </div>
+                            
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Web Technologies - CSS, HTML, Bootstrap, REST API, React.js, Flask, J2EE, Node.js </h3>
+                                </div>
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Tools - Git, SVN, ServiceNow </h3>
+                                </div>
+                                <div class="skills__titles">
+                                    <h3 class="skills__name"> Methodology - Agile-SCRUM, TDD, Waterfall </h3>
+                                </div>                               						                            
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+ 
+       <!--==================== PORTFOLIO ====================-->
+        <!-- <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle">Side Projects</span>
+
+            <div data-aos="fade-right" class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper"> -->
+                    <!--==================== PORTFOLIO 1 ====================-->
+                   <!-- <div class="portfolio__content grid swiper-slide">
+                        <img src="./packages/images/.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Title</h3>
+                            <p class="portfolio__description"> Lorem Ipsum
+							</p>
+                            <a href="#" target="_blank" class="button button--flex button--small portfolio_-button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div> -->
+					
+				<!--==================== PORTFOLIO 2====================-->
+                  <!--  <div class="portfolio__content grid swiper-slide">
+                        <img src="./packages/images/.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Title</h3>
+                            <p class="portfolio__description">Lorem Ipsum                
+							</p>
+                            <a href="#" target="_blank" class="button button--flex button--small portfolio_-button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>		
+                </div> -->
+
+                <!-- Add Arrows -->
+               <!-- <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div> -->
+
+                <!-- Add Pagination -->
+               <!-- <div class="swiper-pagination"></div>
+            </div>
+        </section> -->
+
+
+ <!--==================== Certificates ====================-->
+        <section class="certificate section" id="certification">
+            <h2 class="section__title">My Certificates</h2>
+            <span class="section__subtitle">My recent certification</span>
+            <div data-aos="fade-up" class="portfolio__container container swiper-container">
+            <div class="swiper-wrapper">                    
+					
+	<!--==================== Certificate 1 ====================-->
+		<div class="portfolio__content grid swiper-slide">
+			<div class="portfolio_">
+			AWS Certified Cloud practitioner, <br> <h3 class="portfolio__title"> AWS </h3>
+			<div class="portfolio__data">
+                            <p></p>
+                            <a href="https://www.credly.com/badges/d76b6fa0-0b62-4011-b410-c2c9aec4e02f/email" target="_blank"
+                                class="button button--flex button--small portfolio_-button">
+                                Preview  <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+            </div>
+			</div>
+		</div>
+					
+                <!--==================== Certificate 2 ====================-->
+		<!-- <div class="portfolio__content grid swiper-slide">
+			<div class="portfolio_">
+				Introduction to Data Science, <br> <h3 class="portfolio__title"> CISCO </h3>
+				<div class="portfolio__data">
+                            	<a href="https://www.credly.com/badges/ad89c133-a711-41d2-9a20-0965dae18fd5/public_url" target="_blank" class="button button--flex button--small portfolio_-button">
+                                Preview <i class="uil uil-arrow-right button__icon"></i>
+                           	 </a>
+                        </div>
+			</div>
+		</div> -->
+
+	<!-- Add Arrows -->
+                <!-- <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div> 
+ -->
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+        </section>
+			
+	<!--==================== BLOG ====================-->
+        <section class="portfolio section" id="blog">
+            <h2 class="section__title">Blog</h2>
+            <span class="section__subtitle">My recent blogs</span>
+
+            <div data-aos="fade-right" class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+					<!--==================== BLOG 1 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./packages/images/sf1.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">The Impact of Blockchain Solutions in Investments and Banking</h3>
+                            <p class="portfolio__description">This article delves into the various aspects of using blockchain solutions in these crucial domains, exploring the benefits, challenges, and future implications </p>
+                            <a href="https://medium.com/@kulkarniankita555/the-impact-of-blockchain-solutions-in-investments-and-banking-70efb1ca5e57" target="_blank" class="button button--flex button--small portfolio_-button">
+                                Read
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== BLOG 2 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./packages/images/sf1.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Apache Kafka: The Backbone of Real-Time Data Streaming</h3>
+                            <p class="portfolio__description">This guide breaks down:
+                                ✅ What Kafka is and why it’s used
+                                🌐 Real-world industries and applications
+                                💻 How to implement Kafka using Python
+                                🚀 How to deploy and test your Kafka consumer</p>
+                            <a href="https://medium.com/@kulkarniankita555/apache-kafka-the-backbone-of-real-time-data-streaming-90ed1e45f396" target="_blank" class="button button--flex button--small portfolio_-button">
+                                Read
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section> 
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact me</h2>
+            <span class="section__subtitle">Get in touch</span>
+			<div data-aos="fade-left" class="about__container container grid">
+                <img src="./packages/images/main-2.png" alt="" class="contact__img"/>
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon "></i>
+                        <!--home__social-->
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <a href="#" target="_blank"><span class="contact__subtitle"> kulkarniankita555@gmail.com</span></a>
+                        </div>
+                    </div>
+                    
+		<div class="contact__information">
+                        <i class="uil uil-linkedin-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/kulkarniankita555/" target="_blank"><span class="contact__subtitle">https://www.linkedin.com/in/kulkarniankita555/ </span></a>
+                        </div>
+		</div>
+					
+		<div class="contact__information">
+                        <i class="uil uil-github-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Github</h3>
+                            <a href="https://github.com/ankitakulkarnigit" target="_blank"><span class="contact__subtitle">https://github.com/ankitakulkarnigit</span></a>
+                        </div>
+                    </div>	
+		</div>
+                </div>
+        </section>
+    </main>
+
+    
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h2 style="color: hsl(var(--hue-color), 8%, 95%);">Ankita Kulkarni</h2>
+                    <span class="footer__subtitle">Software Engineer
+		    </span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#about" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#certification" class="footer__link">Certification</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+                 <div class="footer__socials">
+                   <a href="https://www.linkedin.com/in/kulkarniankita555/"
+                        target="_blank" class="footer__social">
+                         <i class="fa fa-linkedin-square"></i>
+                    </a>
+
+                    <a href="https://github.com/ankitakulkarnigit" target="_blank" class="footer__social">
+                        <i class="fa fa-github" ></i>
+                    </a>
+
+                    <a href="https://www.kaggle.com/ankita555" target="_blank" class="footer__social">
+                        <span>&#922;</span>
+                    </a>
+			 <a href="https://medium.com/@kulkarniankita555"  target="_blank" class="footer__social">
+                        <i class="fa fa-medium"></i> 
+                    </a>					
+                </div>
+            </div>
+            <p class="footer__copy">&copy; 2025 Ankita Kulkarni | All Rights Reserved</p>
+        </div>
+    </footer>
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="./packages/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="./packages/js/main.js"></script>
+    <!--=================== Animated text ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-input", {
+            strings: [
+                "a Web Developer",
+                "an OS developer",
+                "a student",
+                "an UI Designer",
+            ],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true,
+        });
+    </script>
+
+    <!--=================== Animate scroll js ===============-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000
+        });
+    </script>
+</body>
 </html>
