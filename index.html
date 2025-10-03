@@ -1,589 +1,918 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="I'm Ankita, and this is my personal portfolio website..">
-		<meta name="keywords" content="Ankita, Ankita Kulkarni, ankita ">
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="./packages/css/swiper-bundle.min.css">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="./packages/css/styles.css">
-		
-	<!--==================== Favicon ====================-->
-	<link rel="shortcut icon" href="./packages/images/favicon.png" type="images/png"> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankita Kulkarni - Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	<!--==================== Animate on scroll CDN ====================-->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-			
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-	<title>Ankita Kulkarni</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-		<nav class="nav container">
-		<a href="#" class="nav__logo">Ankita Kulkarni</a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link">
-                                <i class="uil uil-estate nav__icon"></i>Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i>About
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i>Skills
-                            </a>
-                        </li>
-         
-                        <!--<li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i>Portfolio                                
-                            </a>
-                        </li> -->
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
 
-			<li class="nav__item">
-                            <a href="#certification" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i>Certification                            
-                            </a>
-                        </li>
-			    
-			<li class="nav__item">
-                            <a href="#blog" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i>Blog
-                            </a>
-                        </li> 
-                        
-			<li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i>Contact                            
-                            </a>
-                        </li>
-                    </ul>
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
-                </div>
-                <div class="nav__btns">
-                    <!-- Theme change button -->
+        html {
+            scroll-behavior: smooth;
+        }
 
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <div data-aos="fade-left" class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/kulkarniankita555/"
-                            target="_blank" class="home__social-icon">
-                            <i class="fa fa-linkedin-square" style='font-size:24px'></i>
-                        </a>
-                        <a href="https://github.com/ankitakulkarnigit" target="_blank" class="home__social-icon">
-							<i class="fa fa-github" style='font-size:24px' ></i>
-                        </a>
-                        <!-- <a href="https://www.kaggle.com/ankita555" target="_blank" class="home__social-icon">
-                           <span style='font-size:24px'>&#922;</span>
-                        </a> -->
-						
-			<a href="https://medium.com/@kulkarniankita555" target="_blank" class="home__social-icon">
-			<i class="fa fa-medium" style='font-size:24px'></i> 
-			</a>
-						
-	
-						
-                    </div>
+        nav.scrolled {
+            padding: 1rem 5%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
 
-                    <div data-aos="fade-right" class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
 
-                                <image class="home__blob-img" x="15" y="15" href="./packages/images/main.png" />
-                            </g>
-                        </svg>
-                    </div>
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
 
-                    <div class="home__data">
-                        <h1 class="home_title">Hi!<span class="wave">👋</span>, I'm Ankita</h1>
-                        <h3 class="home__subtitle">
-                            Software Engineer and Machine Learning Enthusiast 
-                        </h3>
-                        <p class="home__description"> </p>
-                        <a href="#contact" class="button button--flex">
-                            Contact me <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-		</div>
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 5%;
+        }
+
+        .hero-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-text {
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .hero-text .description {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+        }
+
+        /* Code Window */
+        .code-window {
+            width: 100%;
+            background: rgba(20, 20, 31, 0.9);
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeInRight 1s ease;
+        }
+
+        .window-header {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .window-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .code-content {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .code-line {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .line-number {
+            color: #4b5563;
+            user-select: none;
+        }
+
+        .keyword { color: #c678dd; }
+        .function { color: #61afef; }
+        .string { color: #98c379; }
+        .comment { color: #5c6370; font-style: italic; }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            scroll-margin-top: 100px;
+        }
+
+        section h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            padding: 0.5rem 1.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            color: var(--primary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Experience Section */
+        .experience-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .experience-card h3 {
+            color: var(--light);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .company {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .date {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-card .description {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            opacity: 0.9;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            color: var(--light);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Articles Section */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .article-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+            display: block;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary);
+        }
+
+        .article-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-header h3 {
+            color: var(--light);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-body {
+            padding: 1.5rem;
+        }
+
+        .article-body p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: gap 0.3s ease;
+        }
+
+        .article-card:hover .read-more {
+            gap: 0.6rem;
+        }
+
+        /* Certificates Section */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .certificate-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certificate-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .certificate-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .certificate-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-card h3 {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-issuer {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-link {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 20px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi! 👋 I'm Ankita Kulkarni</h1>
+                <p class="subtitle">Software Engineer at Barclays</p>
+                <p class="description">Passionate about building high-performance web applications with expertise in Machine Learning and Big Data. With 5+ years of experience designing scalable solutions.</p>
+                <a href="#projects" class="cta-button">View My Work</a>
             </div>
-        </section>
-
-            <!--==================== ABOUT ====================-->
-		<section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle"> My Introduction</span>
-
-            <div data-aos="fade-left" class="about__container container grid">
-                <img src="./packages/images/main-1.png" alt="" class="about__img" />
-
-                <div class="about__data">
-                    <p class="about__description">
-                        Hi! I'm a Software Engineer over at Barclays. My passion really lies in software development, especially when it comes to Machine Learning and Big Data. I've spent the last five years designing and implementing high-performance web applications, and I'm always keen to explore new languages and frameworks to get the job done right.
-	                    </p>
-
-                    <div class="about__buttons">
-                        <a download="" href="packages/docs/Resume_Ankita_Kulkarni" class="button button--flex" target="_blank">
-                            Download Resume <i class="uil uil-download-alt button__icon"></i>
-                        </a>
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="window-dot dot-red"></div>
+                    <div class="window-dot dot-yellow"></div>
+                    <div class="window-dot dot-green"></div>
+                </div>
+                <div class="code-content">
+                    <div class="code-line">
+                        <span class="line-number">1</span>
+                        <span><span class="keyword">class</span> <span class="function">SoftwareEngineer</span>:</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">2</span>
+                        <span>&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">__init__</span>(self):</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">3</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;self.name = <span class="string">"Ankita"</span></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">4</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;self.role = <span class="string">"SWE at Barclays"</span></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">5</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;self.skills = [</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">6</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Machine Learning"</span>,</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">7</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Big Data"</span>,</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">8</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Web Development"</span></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">9</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;]</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">10</span>
+                        <span></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">11</span>
+                        <span>&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">build_amazing_things</span>(self):</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">12</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Let's create something great!</span></span>
+                    </div>
+                    <div class="code-line">
+                        <span class="line-number">13</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Innovation"</span></span>
                     </div>
                 </div>
-            </div>
-        </section>
- 
- <!--==================== SKILLS ====================-->
-    <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-	<span class="section__subtitle">My technical level</span>
-            <div data-aos="fade-up" class="skills__container container grid">
-                <div>
-                    
-		<!--==================== SKILL 1 ====================-->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-brackets-curly skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Programming Languages</h1>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Python </h3>
-                                </div>
-
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Javascript </h3>
-                                </div>
-
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> PHP </h3>
-                                </div>
-
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Scala </h3>
-                                </div>
-
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Shell Script </h3>
-                                </div>
-
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Java </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== SKILL 2 ====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-file-copy-alt skills__icon"></i>
-                            <div>
-                                <h1 class="skills__titles">Frameworks </h1>
-                            </div>
-			<i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Laravel </h3>
-                                </div>
-
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Angular </h3>
-                                </div>
-                            
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Vue </h3>
-                                </div>
-                            
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Apache Spark (using sbt) </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-					               					
-					<!--==================== SKILL 3 ====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-file-copy-alt skills__icon"></i>
-                            <div>
-                                <h1 class="skills__titles">ML Libraries </h1>
-                            </div>
-			<i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> NumPy </h3>
-                                </div>
-
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Pandas </h3>
-                                </div>
-                            
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Matplotlib </h3>
-                                </div>
-                            
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Scikit-learn </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-					               
-                    <!--==================== SKILL 4 ====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-swatchbook skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__titles">Developer Tools and Technologies</h1>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-					<div class="skills__titles">
-                                    <h3 class="skills__name"> Database - SQL, PostgreSQL, DynamoDB, SQLite3</h3>
-                                </div>
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Deployments - Docker, Kubernetes, AWS, Jenkins </h3>
-                                </div>
-                            
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Web Technologies - CSS, HTML, Bootstrap, REST API, React.js, Flask, J2EE, Node.js </h3>
-                                </div>
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Tools - Git, SVN, ServiceNow </h3>
-                                </div>
-                                <div class="skills__titles">
-                                    <h3 class="skills__name"> Methodology - Agile-SCRUM, TDD, Waterfall </h3>
-                                </div>                               						                            
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
- 
-       <!--==================== PORTFOLIO ====================-->
-        <!-- <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Side Projects</span>
-
-            <div data-aos="fade-right" class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper"> -->
-                    <!--==================== PORTFOLIO 1 ====================-->
-                   <!-- <div class="portfolio__content grid swiper-slide">
-                        <img src="./packages/images/.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Title</h3>
-                            <p class="portfolio__description"> Lorem Ipsum
-							</p>
-                            <a href="#" target="_blank" class="button button--flex button--small portfolio_-button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div> -->
-					
-				<!--==================== PORTFOLIO 2====================-->
-                  <!--  <div class="portfolio__content grid swiper-slide">
-                        <img src="./packages/images/.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Title</h3>
-                            <p class="portfolio__description">Lorem Ipsum                
-							</p>
-                            <a href="#" target="_blank" class="button button--flex button--small portfolio_-button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>		
-                </div> -->
-
-                <!-- Add Arrows -->
-               <!-- <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div> -->
-
-                <!-- Add Pagination -->
-               <!-- <div class="swiper-pagination"></div>
-            </div>
-        </section> -->
-
-
- <!--==================== Certificates ====================-->
-        <section class="certificate section" id="certification">
-            <h2 class="section__title">My Certificates</h2>
-            <span class="section__subtitle">My recent certification</span>
-            <div data-aos="fade-up" class="portfolio__container container swiper-container">
-            <div class="swiper-wrapper">                    
-					
-	<!--==================== Certificate 1 ====================-->
-		<div class="portfolio__content grid swiper-slide">
-			<div class="portfolio_">
-			AWS Certified Cloud practitioner, <br> <h3 class="portfolio__title"> AWS </h3>
-			<div class="portfolio__data">
-                            <p></p>
-                            <a href="https://www.credly.com/badges/d76b6fa0-0b62-4011-b410-c2c9aec4e02f/email" target="_blank"
-                                class="button button--flex button--small portfolio_-button">
-                                Preview  <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-            </div>
-			</div>
-		</div>
-					
-                <!--==================== Certificate 2 ====================-->
-		<!-- <div class="portfolio__content grid swiper-slide">
-			<div class="portfolio_">
-				Introduction to Data Science, <br> <h3 class="portfolio__title"> CISCO </h3>
-				<div class="portfolio__data">
-                            	<a href="https://www.credly.com/badges/ad89c133-a711-41d2-9a20-0965dae18fd5/public_url" target="_blank" class="button button--flex button--small portfolio_-button">
-                                Preview <i class="uil uil-arrow-right button__icon"></i>
-                           	 </a>
-                        </div>
-			</div>
-		</div> -->
-
-	<!-- Add Arrows -->
-                <!-- <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div> 
- -->
-                <!-- Add Pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
             </div>
         </div>
-        </section>
-			
-	<!--==================== BLOG ====================-->
-        <section class="portfolio section" id="blog">
-            <h2 class="section__title">Blog</h2>
-            <span class="section__subtitle">My recent blogs</span>
+    </section>
 
-            <div data-aos="fade-right" class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-					<!--==================== BLOG 1 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="./packages/images/sf1.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">The Impact of Blockchain Solutions in Investments and Banking</h3>
-                            <p class="portfolio__description">This article delves into the various aspects of using blockchain solutions in these crucial domains, exploring the benefits, challenges, and future implications </p>
-                            <a href="https://medium.com/@kulkarniankita555/the-impact-of-blockchain-solutions-in-investments-and-banking-70efb1ca5e57" target="_blank" class="button button--flex button--small portfolio_-button">
-                                Read
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--==================== BLOG 2 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="./packages/images/sf1.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Apache Kafka: The Backbone of Real-Time Data Streaming</h3>
-                            <p class="portfolio__description">This guide breaks down:
-                                ✅ What Kafka is and why it’s used
-                                🌐 Real-world industries and applications
-                                💻 How to implement Kafka using Python
-                                🚀 How to deploy and test your Kafka consumer</p>
-                            <a href="https://medium.com/@kulkarniankita555/apache-kafka-the-backbone-of-real-time-data-streaming-90ed1e45f396" target="_blank" class="button button--flex button--small portfolio_-button">
-                                Read
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section> 
-
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact me</h2>
-            <span class="section__subtitle">Get in touch</span>
-			<div data-aos="fade-left" class="about__container container grid">
-                <img src="./packages/images/main-2.png" alt="" class="contact__img"/>
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon "></i>
-                        <!--home__social-->
-                        <div>
-                            <h3 class="contact__title">Email</h3>
-                            <a href="#" target="_blank"><span class="contact__subtitle"> kulkarniankita555@gmail.com</span></a>
-                        </div>
-                    </div>
-                    
-		<div class="contact__information">
-                        <i class="uil uil-linkedin-alt contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/kulkarniankita555/" target="_blank"><span class="contact__subtitle">https://www.linkedin.com/in/kulkarniankita555/ </span></a>
-                        </div>
-		</div>
-					
-		<div class="contact__information">
-                        <i class="uil uil-github-alt contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Github</h3>
-                            <a href="https://github.com/ankitakulkarnigit" target="_blank"><span class="contact__subtitle">https://github.com/ankitakulkarnigit</span></a>
-                        </div>
-                    </div>	
-		</div>
-                </div>
-        </section>
-    </main>
-
-    
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h2 style="color: hsl(var(--hue-color), 8%, 95%);">Ankita Kulkarni</h2>
-                    <span class="footer__subtitle">Software Engineer
-		    </span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#about" class="footer__link">About</a>
-                    </li>
-                    <li>
-                        <a href="#certification" class="footer__link">Certification</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="footer__link">Contact</a>
-                    </li>
-                </ul>
-                 <div class="footer__socials">
-                   <a href="https://www.linkedin.com/in/kulkarniankita555/"
-                        target="_blank" class="footer__social">
-                         <i class="fa fa-linkedin-square"></i>
-                    </a>
-
-                    <a href="https://github.com/ankitakulkarnigit" target="_blank" class="footer__social">
-                        <i class="fa fa-github" ></i>
-                    </a>
-
-                    <a href="https://www.kaggle.com/ankita555" target="_blank" class="footer__social">
-                        <span>&#922;</span>
-                    </a>
-			 <a href="https://medium.com/@kulkarniankita555"  target="_blank" class="footer__social">
-                        <i class="fa fa-medium"></i> 
-                    </a>					
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hi! I'm a passionate Software Engineer at Barclays with expertise in building modern web applications. I love turning complex problems into simple, beautiful solutions.</p>
+                <p>With 5+ years of experience in the field, I've worked on diverse projects ranging from Machine Learning pipelines to Big Data processing systems and high-performance web applications.</p>
+                <div class="skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Big Data</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">Spark</span>
                 </div>
             </div>
-            <p class="footer__copy">&copy; 2025 Ankita Kulkarni | All Rights Reserved</p>
+            <div class="about-text">
+                <p>I believe in continuous learning and staying up-to-date with the latest technologies. My passion lies in software development, especially when it comes to Machine Learning and Big Data technologies.</p>
+                <p>I'm always exploring new languages and frameworks to deliver high-quality, scalable solutions that make a real impact.</p>
+            </div>
         </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-card">
+            <h3>Software Engineer</h3>
+            <p class="company">Barclays</p>
+            <p class="date">2019 - Present</p>
+            <p class="description">
+                Designing and implementing high-performance web applications with a focus on scalability and efficiency. Leading initiatives in Machine Learning integration and Big Data processing to drive business insights and innovation. Working with diverse tech stacks and collaborating with cross-functional teams to deliver robust solutions.
+            </p>
+            <div class="skills">
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Big Data</span>
+                <span class="skill-tag">Web Development</span>
+                <span class="skill-tag">Cloud Architecture</span>
+                <span class="skill-tag">Team Leadership</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🤖</div>
+                <div class="project-info">
+                    <h3>ML Prediction Engine</h3>
+                    <p>High-performance machine learning pipeline for real-time predictions using TensorFlow and Apache Spark. Processes millions of data points with sub-second latency.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">📊</div>
+                <div class="project-info">
+                    <h3>Data Analytics Platform</h3>
+                    <p>Full-stack web application for visualizing and analyzing Big Data streams with real-time dashboards and interactive exploration tools.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🚀</div>
+                <div class="project-info">
+                    <h3>Cloud Migration Tool</h3>
+                    <p>Automated solution for migrating legacy applications to cloud infrastructure. Reduced deployment time by 70% and improved system reliability.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🔍</div>
+                <div class="project-info">
+                    <h3>Intelligent Search System</h3>
+                    <p>NLP-powered search engine with semantic understanding and context-aware recommendations. Improved search accuracy by 40%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles">
+        <h2>Medium Articles</h2>
+        <div class="articles-grid">
+            <a href="https://medium.com/@kulkarniankita555/regression-vs-classification-a-beginners-guide-to-supervised-machine-learning-fd788b39bc00" class="article-card" target="_blank">
+                <div class="article-header">
+                    <div class="article-meta">
+                        <span>📝</span>
+                        <span>4 min read</span>
+                        <span>•</span>
+                        <span>Sept 2025</span>
+                    </div>
+                    <h3>Regression vs Classification: A Beginner’s Guide to Supervised Machine Learning</h3>
+                </div>
+                <div class="article-body">
+                    <p>Breaks down regression vs classification in machine learning with real-world examples and Python implementations using scikit-learn's Diabetes and Iris datasets, covering essential concepts like model evaluation metrics (MSE, accuracy) and techniques to avoid overfitting.</p>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="https://medium.com/@kulkarniankita555/apache-kafka-the-backbone-of-real-time-data-streaming-90ed1e45f396" class="article-card" target="_blank">
+                <div class="article-header">
+                    <div class="article-meta">
+                        <span>📝</span>
+                        <span>4 min read</span>
+                        <span>•</span>
+                        <span>June 2025</span>
+                    </div>
+                    <h3>Apache Kafka: The Backbone of Real-Time Data Streaming</h3>
+                </div>
+                <div class="article-body">
+                    <p>Deep dive into Apache Kafka for real-time data streaming, demonstrating Python implementation with filtering logic, Docker setup, security configurations (SSL/SASL), and production best practices for building scalable, fault-tolerant event-driven systems.</p>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="https://medium.com/@kulkarniankita555/the-impact-of-blockchain-solutions-in-investments-and-banking-70efb1ca5e57" class="article-card" target="_blank">
+                <div class="article-header">
+                    <div class="article-meta">
+                        <span>📝</span>
+                        <span>6 min read</span>
+                        <span>•</span>
+                        <span>Jan 2024</span>
+                    </div>
+                    <h3>The Impact of Blockchain Solutions in Investments and Banking</h3>
+                </div>
+                <div class="article-body">
+                    <p>Explores how blockchain technology is transforming banking and investments through enhanced security, transparency, and efficiency. Covers tokenization of assets for fractional ownership, smart contracts for automated agreements, and real-world implementations like JPMorgan's JPM Coin, while addressing challenges like regulatory hurdles and scalability concerns.</p>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <h2>Certifications</h2>
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <div class="certificate-icon">🏆</div>
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p class="certificate-issuer">Amazon Web Services</p>
+                <p class="certificate-date">Issued: 2024</p>
+                <a href="https://www.credly.com/badges/d76b6fa0-0b62-4011-b410-c2c9aec4e02f/email" class="certificate-link" target="_blank">View Certificate</a>
+            </div>
+            <div class="certificate-card">
+                <div class="certificate-icon">🏆</div>
+                <h3>AWS Certified Solutions Architect</h3>
+                <p class="certificate-issuer">Amazon Web Services</p>
+                <p class="certificate-date">Issued: 2025</p>
+                <span class="certificate-link" style="opacity: 0.6; cursor: default;">In Progress</span>
+            </div>
+            <div class="certificate-card">
+                <div class="certificate-icon">🎓</div>
+                <h3>Supervised Machine Learning: Regression and Classification</h3>
+                <p class="certificate-issuer">Coursera - Stanford University</p>
+                <p class="certificate-date">Issued: 2025</p>
+                <a href="https://www.coursera.org/account/accomplishments/verify/CZMZNSZF5W89" class="certificate-link" target="_blank">View Certificate</a>
+            </div>
+            <div class="certificate-card">
+                <div class="certificate-icon">🎓</div>
+                <h3>Advanced Learning Algorithms</h3>
+                <p class="certificate-issuer">Coursera - Stanford University</p>
+                <p class="certificate-date">Issued: 2025</p>
+                <span class="certificate-link" style="opacity: 0.6; cursor: default;">In Progress</span>
+            </div>
+            <div class="certificate-card">
+                <div class="certificate-icon">🌐</div>
+                <h3>JLPT N4 Certification</h3>
+                <p class="certificate-issuer">Japanese Language Proficiency Test</p>
+                <p class="certificate-date">Issued: 2017</p>
+                <a href="#" class="certificate-link" target="_blank">View Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    📧 Email
+                </a>
+                <a href="https://github.com/ankitakulkarnigit" class="contact-link" target="_blank">
+                    🐙 GitHub
+                </a>
+                <a href="https://linkedin.com/in/kulkarniankita555" class="contact-link" target="_blank">
+                    💼 LinkedIn
+                </a>
+<!--                 <a href="https://twitter.com/yourusername" class="contact-link" target="_blank">
+                    🐦 Twitter
+                </a> -->
+                <a href="https://medium.com/@kulkarniankita555" class="contact-link" target="_blank">
+                    ✍️ Medium
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ankita Kulkarni | All Rights Reserved</p>
     </footer>
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
-    
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="./packages/js/swiper-bundle.min.js"></script>
-
-    <!--==================== MAIN JS ====================-->
-    <script src="./packages/js/main.js"></script>
-    <!--=================== Animated text ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        var typed = new Typed(".auto-input", {
-            strings: [
-                "a Web Developer",
-                "an OS developer",
-                "a student",
-                "an UI Designer",
-            ],
-            typeSpeed: 100,
-            backSpeed: 100,
-            loop: true,
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
-    </script>
 
-    <!--=================== Animate scroll js ===============-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 300,
-            duration: 2000
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     </script>
 </body>
